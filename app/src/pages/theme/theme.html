@@ -1,0 +1,100 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>主题</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!--图表-->
+  <!--<div #theme class="div-charts"></div>-->
+  <ion-card >
+    <ion-card-header>
+        <ion-icon name="navigate"></ion-icon>利润表(2017中报)
+    </ion-card-header>
+    <ion-card-content>
+       <ion-list>
+        <a ion-item href="#" (click)="gotoIframe();">
+          <ion-label style="font-size:1.4rem;font-weight:normal;line-height:normal;" item-start>业务总收入</ion-label>
+          <ion-label item-end style="font-size:1.4rem;font-weight:normal;line-height:normal;">9.55亿</ion-label>
+        </a>
+        <a ion-item href="#">
+          <ion-label style="font-size:1.4rem;font-weight:normal;line-height:normal;" item-start>营业利润</ion-label>
+          <ion-label item-end style="font-size:1.4rem;font-weight:normal;line-height:normal;">1.55亿</ion-label>
+        </a>
+        <a ion-item href="#">
+          <ion-label style="font-size:1.4rem;font-weight:normal;line-height:normal;" item-start>营业利润</ion-label>
+          <ion-label item-end style="font-size:1.4rem;font-weight:normal;line-height:normal;">1.55亿</ion-label>
+        </a>
+       </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card >
+    <ion-card-header>
+        <ion-icon name="navigate"></ion-icon>2017年收入报表图
+    </ion-card-header>
+    <ion-card-content>
+       <ion-list>
+          <h2>业务总收入</h2>
+          <h3>全年业务总收入</h3>
+          <div #theme style="width: 100%;height:100px;"></div>
+       </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card >
+    <ion-card-header>
+        <ion-icon name="navigate"></ion-icon>2017年收入报表图
+    </ion-card-header>
+    <ion-card-content>
+       <ion-list>
+          <h2>业务总收入</h2>
+          <h3>全年业务总收入</h3>
+          <div #theme1 style="width: 100%;height:150px;"></div>
+       </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card >
+    <ion-card-header>
+        <ion-icon name="navigate"></ion-icon>利润表(2017中报)
+    </ion-card-header>
+    <ion-card-content>
+       <ion-grid style="width: 100%;">
+          <ion-row>
+            <ion-col col-12>
+              <ion-label>武汉</ion-label>
+            </ion-col>
+            <ion-col col-6>
+              <ion-label>黄冈</ion-label>
+            </ion-col>
+            <ion-col col-6>
+              <ion-label>十堰</ion-label>
+            </ion-col>
+          </ion-row> 
+          <ion-row>
+            <ion-col col-6>
+              <ion-label>鄂州</ion-label>
+            </ion-col>
+            <ion-col col-12>
+              <ion-label>黄石</ion-label>
+            </ion-col>
+            <ion-col col-6>
+              <ion-label>仙桃</ion-label>
+            </ion-col>
+          </ion-row> 
+          <ion-row>
+            <ion-col col-6>
+              <ion-label>孝感</ion-label>
+            </ion-col>
+            <ion-col col-6>
+              <ion-label>宜昌</ion-label>
+            </ion-col>
+            <ion-col col-12>
+              <ion-label>襄樊</ion-label>
+            </ion-col>
+          </ion-row> 
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

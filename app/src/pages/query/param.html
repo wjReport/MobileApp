@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>选择参数</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+      <ion-toolbar *ngFor="let i of selectInParam">
+          <ion-input type="text" placeholder="{{ i.name }}" [(ngModel)]="i.value"></ion-input>
+          <ion-buttons *ngIf="i.lookup" end class="bar-buttons bar-buttons-ios">
+              <button icon-only ion-button class="disable-hover bar-button bar-button-ios bar-button-default bar-button-default-ios" (click)="presentAlert(i)">...</button>
+          </ion-buttons>
+      </ion-toolbar>
+      <button ion-button full (click)="execSelect()" >查询</button>
+</ion-content>
