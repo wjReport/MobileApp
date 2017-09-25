@@ -57,7 +57,7 @@ export class ThemeListPage {
     //this.getAppFile();
 
     for (let i = 0; i < 30; i++) {
-      this.items.push("hello");
+      this.items.push(this.page_content);
     }
   }
 

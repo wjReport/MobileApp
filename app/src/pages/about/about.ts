@@ -16,7 +16,7 @@ import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitiz
 })
 export class AboutPage {
 
-  page_content = "<ion-card class='card-ios'><ion-card-header>hello</ion-card-header><ion-card-content>Card Content</ion-card-content></ion-card>"
+  page_content = "<ion-card class='card-iÍos'><ion-card-header>hello</ion-card-header><ion-card-content>Card Content</ion-card-content></ion-card>";
 
 
   constructor(private sanitizer: DomSanitizer, public navCtrl: NavController, public navParams: NavParams) {
