@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitization_service';
 
 /**
  * Generated class for the AboutPage page.
@@ -15,7 +16,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  page_content = "<ion-card class='card-ios'><ion-card-header>hello</ion-card-header><ion-card-content>Card Content</ion-card-content></ion-card>"
+
+
+  constructor(private sanitizer: DomSanitizer, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
