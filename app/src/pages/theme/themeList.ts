@@ -18,6 +18,7 @@ import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitiz
 })
 export class ThemeListPage {
   themeList: any;
+  contentList: any;
   items = [];
   page_content = `  <style>
   table tr td {
@@ -54,17 +55,18 @@ export class ThemeListPage {
   //"<ion-icon name='ios-arrow-forward' item-right></ion-icon>" +
   //"</ion-item>";
   constructor(private sanitizer: DomSanitizer, public navCtrl: NavController, public navParams: NavParams, private http: Http, private commonService: AppCommonService) {
-    //this.getAppFile();
+    this.getAppFile();
 
     for (let i = 0; i < 30; i++) {
-      this.items.push(this.page_content);
+      this.items.push(this.items.length);
     }
   }
 
   getAppFile() {
-    this.http.post(this.commonService.getReportServerPath() + "/select/getAppFile", null, { headers: this.commonService.getHeaders() }).toPromise().then(
+    this.http.post(this.commonService.getReportServerPath() + "/mobileSubject/getMobileDirectory", null, { headers: this.commonService.getHeaders() }).toPromise().then(
       res => {
-        this.themeList = res.json();
+        this.contentList = res.json();
+        console.log(res.json());
       }
     );
   }

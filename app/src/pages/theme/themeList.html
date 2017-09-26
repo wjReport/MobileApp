@@ -110,16 +110,16 @@
   </ion-card>
 
 
-  <ion-card >
+  <ion-card *ngFor="let content of contentList">
      
       <ion-card-header style="padding:0px;font-size: 1.3rem;">
           <ion-item ><span style="font-family:Microsoft YaHei;">
-            </span>利润表<span style="color:#c5c5c5">（2017中报)</span>
+            {{content.title}}</span>
             <ion-icon name="more" item-right></ion-icon>
           </ion-item>
     
         </ion-card-header>
-      <ion-card-content [innerHTML]="sanitizer.bypassSecurityTrustHtml(page_content)"></ion-card-content>
+      <ion-card-content [innerHTML]="sanitizer.bypassSecurityTrustHtml(content.body)"></ion-card-content>
       <ion-row>
           <ion-col>
             <button ion-button icon-left clear small>
@@ -146,35 +146,9 @@
     </ion-item>
   </ion-list>-->
 
-
-    <ion-card *ngFor="let i of items"> 
-        
-         <ion-card-header style="padding:0px;font-size: 1.3rem;">
-             <ion-item ><span style="font-family:Microsoft YaHei;">
-               </span>利润表<span style="color:#c5c5c5">{{i}}</span>
-               <ion-icon name="more" item-right></ion-icon>
-             </ion-item>
-       
-           </ion-card-header>
-         <ion-card-content [innerHTML]="sanitizer.bypassSecurityTrustHtml(i)"></ion-card-content>
-         <ion-row>
-             <ion-col>
-               <button ion-button icon-left clear small>
-                       <ion-icon name="thumbs-up"></ion-icon>
-                       <div>12 Likes</div>
-                     </button>
-             </ion-col>
-             <ion-col>
-               <button ion-button icon-left clear small>
-                       <ion-icon name="text"></ion-icon>
-                       <div>4 Comments</div>
-                     </button>
-             </ion-col>
-            
-           </ion-row>  
-   
-     </ion-card>
- 
+  <ion-list>
+    <ion-item *ngFor="let i of items">{{i}}</ion-item>
+  </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
