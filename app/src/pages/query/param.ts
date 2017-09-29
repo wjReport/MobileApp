@@ -86,7 +86,8 @@ export class ParamPage {
             console.log(res.json());
             // setTimeout(() => {
                this.navCtrl.push(ResultListPage,{
-                    resultList: res.json()
+                    resultList: res.json(),
+                    selectOutParam: this.selectOutParam
                 });
               loading.dismiss();
             // }, 1000);

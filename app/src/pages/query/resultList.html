@@ -11,13 +11,13 @@
   <ion-scroll style="width: 100%;height: 100%;" scrollX="true" scrollY="true">
       <ion-grid style="width: 100%;" class="tabs">
         <ion-row >
-          <ion-col width-50 *ngFor="let r of resultList">
-              <ion-item style="padding:0px;">{{ r.name }}</ion-item>
+          <ion-col width-50 *ngFor="let o of selectOutParam">
+              <ion-item style="padding:0px;">{{ o.name }}</ion-item>
           </ion-col>
         </ion-row> 
-        <ion-row>
-          <ion-col width-50 *ngFor="let r of resultList">
-            <ion-item style="padding:0px;" *ngFor="let c of r.children"><p>{{ c.name }}</p></ion-item>
+        <ion-row *ngFor="let r of resultList" (click)="getResult(r)">
+          <ion-col width-50 *ngFor="let l of r.list">
+            <ion-item style="padding:0px;"><p>{{ l.name }}</p></ion-item>
           </ion-col>
         </ion-row>
       </ion-grid>
