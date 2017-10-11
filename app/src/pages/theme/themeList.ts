@@ -5,7 +5,7 @@ import { AppCommonService } from '../../app/app-common';
 import { ThemePage } from '../theme/theme';
 import { BrowserPage } from './browser';
 // import echarts from 'echarts';
-import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitization_service';
+import { DomSanitizer } from '@angular/platform-browser';
 /*
   Generated class for the Index page.
 

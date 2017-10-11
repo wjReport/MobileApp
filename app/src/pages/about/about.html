@@ -61,7 +61,7 @@
       <!-- <ion-item >单个列表
       <ion-icon name="ios-arrow-forward"  item-right></ion-icon>
   </ion-item> -->
-      <button ion-item>我关注的报表
+      <button ion-item (click)="myClick1()">我关注的报表
         <ion-icon name="ios-arrow-forward" color="beauty5" item-end></ion-icon>
       </button>
       <button ion-item>登录设置
@@ -71,5 +71,14 @@
     <ion-list>
       <ion-item>动态<button ion-button item-end color="secondary">发表</button> </ion-item>
     </ion-list>
+
   </div>
-</ion-content>
+  <!-- <table id="myTable" style="border:1px solid #4C17DD"></table> -->
+  <!-- <div [innerHtml]="test"> -->
+<!-- <div [innerHtml]="this.sanitizer.bypassSecurityTrustHtml(test)" class="myList">
+  
+</div> -->
+<!-- 
+<div [innerHtml]="html|safeHtml"></div>
+
+</ion-content> -->
