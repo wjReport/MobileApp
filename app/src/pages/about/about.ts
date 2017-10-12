@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DomSanitizer } from '@angular/platform-browser/src/security/dom_sanitization_service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 /**
  * Generated class for the AboutPage page.
