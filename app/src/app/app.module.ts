@@ -17,6 +17,8 @@ import { ThemeListPage } from '../pages/theme/themeList';
 import { BrowserPage } from '../pages/theme/browser';
 import { AppService } from './app.service';
 import { AppCommonService } from './app-common';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,10 @@ import { AppCommonService } from './app-common';
     BrowserPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    BrowserModule,
+    HttpModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
