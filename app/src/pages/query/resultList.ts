@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,LoadingController } from 'ionic-angular';
 import {Http} from '@angular/http';
 import { AppCommonService } from '../../app/app-common';
+import { ResultValuePage } from '../query/resultValue';
+
 /*
   Generated class for the Query page.
 
@@ -15,8 +17,7 @@ import { AppCommonService } from '../../app/app-common';
 export class ResultListPage {
   selectOutParam:OutParam;
   resultList:any;
-  result:string[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,private commonService:AppCommonService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,private commonService:AppCommonService,public loadingCtrl: LoadingController) {
       console.log("~~~~~~~~~~");
       console.log(navParams.get('resultList'));
       //输出表头
@@ -24,6 +25,7 @@ export class ResultListPage {
         //生成列
  
       this.resultList = navParams.get('resultList');
+      this.selectOutParam = navParams.get('selectOutParam');
       
   }
 
@@ -31,6 +33,20 @@ export class ResultListPage {
     console.log('ionViewDidLoad ResultListPage');
   }
 
+  getResult(result:any){
+    console.log(result.list);
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: '正在加载数据....'
+    });
+
+    loading.present();
+    this.navCtrl.push(ResultValuePage,{
+        resultValue: result.list,
+        selectOutParam: this.selectOutParam
+    });
+    loading.dismiss();
+  }
 }
 export class OutParam{
   id:string;

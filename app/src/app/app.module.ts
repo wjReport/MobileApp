@@ -11,6 +11,7 @@ import { QueryPage } from '../pages/query/query';
 import { SelectNamePage } from '../pages/query/selectName';
 import { ParamPage } from '../pages/query/param';
 import { ResultListPage } from '../pages/query/resultList';
+import { ResultValuePage } from '../pages/query/resultValue';
 import { ThemePage } from '../pages/theme/theme';
 import { ThemeListPage } from '../pages/theme/themeList';
 import { BrowserPage } from '../pages/theme/browser';
@@ -30,6 +31,7 @@ import { AppCommonService } from './app-common';
     SelectNamePage,
     ParamPage,
     ResultListPage,
+    ResultValuePage,
     ThemePage,
     ThemeListPage,
     BrowserPage
@@ -50,6 +52,7 @@ import { AppCommonService } from './app-common';
     SelectNamePage,
     ParamPage,
     ResultListPage,
+    ResultValuePage,
     ThemePage,
     ThemeListPage,
     BrowserPage
