@@ -80,17 +80,15 @@ export class ParamPage {
     });
 
     loading.present();
-    this.http.post(this.commonService.getReportServerPath()+"/select/execSelectAPP/"+this.selectName+"/"+this.reportName,this.selectParamRes,{headers: this.commonService.getHeaders()}).toPromise().then(
+    this.http.post(this.commonService.getReportServerPath()+"/select/execSelectAPP/"+this.selectName+"/"+this.reportName,[this.selectParamRes],{headers: this.commonService.getHeaders()}).toPromise().then(
         res=>{
             console.log("execSelect:");
             console.log(res.json());
-            // setTimeout(() => {
-               this.navCtrl.push(ResultListPage,{
-                    resultList: res.json(),
-                    selectOutParam: this.selectOutParam
-                });
-              loading.dismiss();
-            // }, 1000);
+            this.navCtrl.push(ResultListPage,{
+                resultList: res.json(),
+                selectOutParam: this.selectOutParam
+            });
+            loading.dismiss();
         }
     );
   }

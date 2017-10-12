@@ -24,7 +24,7 @@ export class ResultListPage {
       //生成行
         //生成列
  
-      this.resultList = navParams.get('resultList');
+      this.resultList = navParams.get('resultList').list;
       this.selectOutParam = navParams.get('selectOutParam');
       
   }
