@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header>
   <ion-navbar>
     <ion-title>主题</ion-title>
@@ -151,4 +152,57 @@
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+=======
+<ion-header>
+  <ion-navbar>
+    <ion-title>主题</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content style="padding:0px;margin:0px;">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="正在刷新...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!--<ion-card [innerHTML]="sanitizer.bypassSecurityTrustHtml(card_content)">
+
+  </ion-card>-->
+
+  <ion-card *ngFor="let content of contentList">
+     
+      <ion-card-header style="padding:0px;font-size: 1.3rem;">
+          <ion-item ><span style="font-family:Microsoft YaHei;">
+            {{content.title}}</span>
+            <ion-icon name="more" item-right></ion-icon>
+          </ion-item>
+    
+        </ion-card-header>
+      <ion-card-content [innerHTML]="sanitizer.bypassSecurityTrustHtml(content.body)"></ion-card-content>
+      <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>12 Likes</div>
+                  </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>4 Comments</div>
+                  </button>
+          </ion-col>
+         
+        </ion-row>  
+
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+>>>>>>> zj
 </ion-content>
